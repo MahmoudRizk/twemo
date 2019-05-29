@@ -75,6 +75,9 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     "twemo.users.apps.UsersConfig",
+    "twemo.dashboard.apps.DashboardConfig",
+    "twemo.classifiers.apps.ClassifiersConfig",
+    "twemo.dispatcher.apps.DispatcherConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
