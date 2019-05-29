@@ -11,5 +11,25 @@ python:
   - "3.6"
 install:
   - pip install -r requirements/local.txt
+  - pip install tox-travis
+env:
+  global:
+    - DATABASE_URL="postgres://postgres@localhost:5432/twemo"
+    - SECRET_KEY="1234"
+matrix:
+  fast_finish: true
+  include:
+    - env: TOXENV=black SCRIPT=tox
+      python: "3.6"
+    - env: TOXENV=flake8 SCRIPT=tox
+      python: "3.6"
+    - env: TOXENV=check_migrations SCRIPT=tox
+      python: "3.6"
+    - env: SCRIPT=pytest
+      python: "3.6"
+services:
+  - postgresql
+addons:
+  postgresql: 9.4
 script:
-  - "pytest"
+  - (eval "$SCRIPT")

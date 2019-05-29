@@ -9,6 +9,10 @@ twitter sentiment analyzer
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
+.. image:: https://travis-ci.com/MahmoudRizk/twemo.svg?branch=master
+     :target: https://travis-ci.com/MahmoudRizk/twemo
+     :alt: Travis CI build
+     
 
 
 :License: MIT
